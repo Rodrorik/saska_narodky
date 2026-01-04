@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #ffd6e0, #e0c3fc);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.icons {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 64px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.section {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.95);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.section.active {
+  display: flex;
+}
+
+.content {
+  text-align: center;
+  max-width: 600px;
+}
+
+.bouquet {
+  font-size: 80px;       /* same-ish size as before */
+  display: inline-block;
+  animation: float 3s infinite ease-in-out;
+  text-align: center;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.cake {
+  font-size: 100px;       /* bigger cake */
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+.candle {
+  position: absolute;
+  top: -35px;            /* above the cake emoji */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+  animation: flicker 1s infinite alternate;
+}
+
+/* small flicker animation */
+@keyframes flicker {
+  0% { transform: translateX(-50%) rotate(0deg); }
+  50% { transform: translateX(-50%) rotate(5deg); }
+  100% { transform: translateX(-50%) rotate(-5deg); }
+}
+
+.envelope {
+  font-size: 70px;
+  cursor: pointer;
+}
+
+.letter {
+  max-height: 0;            /* hidden by default */
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  margin-top: 10px;
+}
+
+.letter.show {
+  max-height: 500px;        /* enough to show all text */
+  opacity: 1;
+}
+
+
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ff8fab;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Mobile / portrait layout */
+@media (max-width: 600px) {
+  .icons {
+    flex-direction: column; /* stack vertically */
+    gap: 40px;             /* smaller gap for mobile */
+  }
+
+  h1 {
+    font-size: 2.2rem;     /* smaller title for phones */
+  }
+
+  .icon {
+    font-size: 60px;       /* slightly smaller icons */
+  }
+
+  .container {
+    padding: 20px;
+  }
+}

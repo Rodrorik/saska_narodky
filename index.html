@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Všetko Najlepšie ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="multicolor">
+      ❤️
+      <span style="color:#ff4d4d">V</span>
+      <span style="color:#ffbb33">š</span>
+      <span style="color:#ffee58">e</span>
+      <span style="color:#8bc34a">t</span>
+      <span style="color:#00bcd4">k</span>
+      <span style="color:#3f51b5">o</span>
+      <span style="color:#e91e63"> </span>
+      <span style="color:#ff4d4d">N</span>
+      <span style="color:#ffbb33">a</span>
+      <span style="color:#ffee58">j</span>
+      <span style="color:#8bc34a">l</span>
+      <span style="color:#00bcd4">e</span>
+      <span style="color:#3f51b5">p</span>
+      <span style="color:#e91e63">š</span>
+      <span style="color:#ff4d4d">i</span>
+      <span style="color:#ffbb33">e</span>
+      ❤️
+    </h1>
+
+    <!-- ICON MENU -->
+    <div class="icons">
+      <div class="icon" onclick="openSection('flowers')">🌸</div>
+      <div class="icon" onclick="openSection('cake')">🕯️</div>
+      <div class="icon" onclick="openSection('letter')">💌</div>
+    </div>
+  </div>
+
+  <!-- FLOWERS -->
+<div class="section" id="flowers">
+  <div class="content">
+    <h2>Pre teba 🌸</h2>
+    <!-- Big animated bouquet -->
+    <div class="bouquet">💐💐💐</div>
+    <p>
+      Tieto kvety sú pre teba.  
+      Keď sa bude dať, dám ti aj osobne.
+    </p>
+    <button onclick="closeSections()">Späť</button>
+  </div>
+</div>
+
+  <!-- CAKE -->
+  <div class="section" id="cake">
+    <div class="content">
+      <h2>Praj si niečo 🍰</h2>
+      <div class="cake">
+        🍰
+        <span class="candle">🕯️</span>
+      </div>
+      <p id="cakeText">Praj si niečo a sfúkni sviečku.</p>
+      <button onclick="blowCandles()">Sfúkni 🎉</button>
+      <br /><br />
+      <button onclick="closeSections()">Späť</button>
+    </div>
+  </div>
+
+
+
+  <!-- LETTER -->
+  <div class="section" id="letter">
+    <div class="content">
+      <h2>List pre teba 💌</h2>
+      <div class="envelope" onclick="openLetter()">✉️</div>
+      <div class="letter hidden">
+        <p>
+          Všetko najlepšie ❤️  
+          Z teba už pomaly dospelá žena.
+          Som veľmi rád, že ťa mám v živote.  
+          Síce sa poznáme len rok, ale ja už mám pocit, ako by to bola celá večnosť.  
+          Prajem ti veľa šťastia, zdravia a lásky.  
+          Nech sa ti splnia všetky tvoje sny.  
+          A dúfam, že si užiješ deň tak, ako si ja užívam každý deň s tebou(aj keď je to iba online).
+        </p>
+      </div>
+      <br />
+      <button onclick="closeSections()">Späť</button>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
